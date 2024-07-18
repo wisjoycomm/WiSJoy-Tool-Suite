@@ -1,0 +1,24 @@
+{
+    "name": "WiSJoy.Extend.Editor",
+    "rootNamespace": "WiSJoy",
+    "references": [
+        "GUID:e25605b5339d96e4ea450796634d48ed",
+        "GUID:7ba3e488915953b4e83865b21d2b2583",
+        "GUID:15125e559d9311c46ba451729eefaff2",
+        "GUID:bbde805d927e795439d7a746d1749cab",
+        "GUID:ebcc2dbcca2c7f34ea1bbffd92c7e885",
+        "GUID:4129704b5a1a13841ba16f230bf24a57",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
