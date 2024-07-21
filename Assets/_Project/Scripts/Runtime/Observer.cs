@@ -6,16 +6,11 @@ namespace WiSJoy
 {
     public class Observer : MonoBehaviour
     {
-
-        Example example = new Example();
-
         private void Update()
         {
 #if UNITY_EDITOR
             if (Input.GetMouseButtonDown(0))
             {
-                example.Score = 100;
-                example.PlayerId = "Player1";
                 MessageBus.I.Notify<Example>(message =>
                 {
                     message.Score = 100;
