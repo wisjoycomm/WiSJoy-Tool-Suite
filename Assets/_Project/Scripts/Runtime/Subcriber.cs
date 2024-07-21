@@ -8,17 +8,17 @@ namespace WiSJoy
     {
         private void OnEnable()
         {
-            MessageBus.I.Subscribe<Example>(OnExampleMessage, MessageChannel.ui);
+            MessageBus.I.Subscribe<Example>(OnExampleMessage, MessageChannel.gameplay);
         }
         private void OnDisable()
         {
-            MessageBus.I.Unsubscribe<Example>(OnExampleMessage, MessageChannel.ui);
+            MessageBus.I.Unsubscribe<Example>(OnExampleMessage, MessageChannel.gameplay);
         }
 
         private void OnExampleMessage(Example message)
         {
-            Debug.Log($"Score: {message.Score}, PlayerId: {message.PlayerId}");
-            message.Callback?.Invoke();
+            // Debug.Log($"Score: {message.Score}, PlayerId: {message.PlayerId}");
+            // message.Callback?.Invoke();
         }
     }
 }

@@ -1,18 +1,15 @@
 using System;
-
-namespace WiSJoy.DesignPattern
+using WiSJoy.DesignPattern;
+// Example message class implementing the resettable interface
+public class Example : IResettable
 {
-    // Example message class implementing the resettable interface
-    public class Example : IResettable
-    {
-        public int Score { get; set; }
-        public string PlayerId { get; set; }
-        public Action Callback { get; set; }
+    public int Score { get; set; }
+    public string PlayerId { get; set; }
+    public Action Callback { get; set; }
 
-        public void Reset()
-        {
-            Score = 0;
-            PlayerId = null;
-        }
+    public void Reset()
+    {
+        Score = 0;
+        PlayerId = null;
     }
 }

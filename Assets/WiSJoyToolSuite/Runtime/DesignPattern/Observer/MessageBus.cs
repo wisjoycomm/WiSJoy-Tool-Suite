@@ -12,8 +12,6 @@ namespace WiSJoy.DesignPattern
         private readonly Dictionary<MessageChannel, Dictionary<Type, List<Delegate>>> _channelSubscribers = new();
         private readonly Dictionary<Type, object> _messagePools = new();
 
-        private readonly object _lock = new object();
-
         private MessageBus() { }
 
         /// <summary>
@@ -54,6 +52,14 @@ namespace WiSJoy.DesignPattern
             }
             pool.Release(message);
         }
+        public void Notify<T>(Action<T> configure, MessageChannel channel) where T : class, new()
+        {
+            var pool = GetPool<T>();
+            var message = pool.Get();
+            configure?.Invoke(message);
+            Dispatch(channel, message);
+            pool.Release(message);
+        }
 
         /// <summary>
         /// Dispatch a message to all subscribers
@@ -74,9 +80,9 @@ namespace WiSJoy.DesignPattern
             }
 
             // Tạo một bản sao của danh sách subscribers để tránh ConcurrentModificationException
-            var subscribersCopy = new List<Delegate>(subscribers);
+            // var subscribersCopy = new List<Delegate>(subscribers);
 
-            foreach (Delegate subscriber in subscribersCopy)
+            foreach (Delegate subscriber in subscribers)
             {
                 if (subscriber is Action<T> action)
                 {
@@ -84,7 +90,19 @@ namespace WiSJoy.DesignPattern
                 }
             }
         }
-        public async UniTask NotifyAsync<T>(Action<T> configure, int delayMilliseconds = 0, params MessageChannel[] channels) where T : class, new()
+        public async UniTask NotifyAsync<T>(Action<T> configure, int delayMilliseconds, MessageChannel channel) where T : class, new()
+        {
+            var pool = GetPool<T>();
+            var message = pool.Get();
+            configure?.Invoke(message);
+            if (delayMilliseconds > 0)
+            {
+                await UniTask.Delay(delayMilliseconds); // Trì hoãn bằng UniTask.Delay
+            }
+            await DispatchAsync(channel, message);
+            pool.Release(message); // Chỉ release message sau khi tất cả đã hoàn thành
+        }
+        public async UniTask NotifyAsync<T>(Action<T> configure, int delayMilliseconds, params MessageChannel[] channels) where T : class, new()
         {
             var pool = GetPool<T>();
             var message = pool.Get();

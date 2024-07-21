@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/Json/TestJsonSoft.unity
     guid: 6922e145ee5795d4fa298e9ebe49f197
+  - enabled: 1
+    path: Assets/_Project/Scenes/Message/MessagePerformanceTest.unity
+    guid: 9ff0641d5a7ce1f4e84748635b7fc1a1
   m_configObjects: {}
