@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using MessagePack;
 using UnityEngine;
-namespace WiSdom.SaveSystem.Data
+namespace WisJoy.SaveSystem.Data
 {
     [MessagePackObject]
     [Serializable]

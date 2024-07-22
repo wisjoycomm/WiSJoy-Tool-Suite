@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace WiSdom
+namespace WisJoy
 {
     public class CatManager : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using System;
-using WiSdom.SaveSystem.Data;
-namespace WiSdom.SaveSystem
+using WisJoy.SaveSystem.Data;
+namespace WisJoy.SaveSystem
 {
     /*
         Do not modify this script

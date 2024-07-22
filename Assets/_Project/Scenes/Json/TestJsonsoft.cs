@@ -7,8 +7,8 @@ using MessagePack.Unity;
 using MessagePack.Unity.Extension;
 using TMPro;
 using UnityEngine;
-using WiSdom.SaveSystem;
-namespace WiSdom
+using WisJoy.SaveSystem;
+namespace WisJoy
 {
     public class TestJsonsoft : MonoBehaviour
     {

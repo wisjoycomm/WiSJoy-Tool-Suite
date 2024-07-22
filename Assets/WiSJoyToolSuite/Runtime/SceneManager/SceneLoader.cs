@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using WiSJoy.DesignPattern;
 
-namespace WiSdom.Core
+namespace WisJoy.Core
 {
     public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
     {

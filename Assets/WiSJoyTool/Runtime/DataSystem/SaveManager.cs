@@ -3,7 +3,7 @@ using System.Text;
 using Cysharp.Threading.Tasks;
 using MessagePack;
 using UnityEngine;
-using WiSdom;
+using WisJoy;
 
 public static class SaveManager
 {

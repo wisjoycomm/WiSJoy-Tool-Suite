@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace WiSdom
+namespace WisJoy
 {
     public static class Utility
     {

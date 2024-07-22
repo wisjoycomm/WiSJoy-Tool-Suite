@@ -1,8 +1,8 @@
 using Cysharp.Threading.Tasks;
-using WiSdom.SaveSystem.Data;
+using WisJoy.SaveSystem.Data;
 using WiSJoy.DesignPattern;
 
-namespace WiSdom.SaveSystem
+namespace WisJoy.SaveSystem
 {
 	/*
 		How to use DataManager:

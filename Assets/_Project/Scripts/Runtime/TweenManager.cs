@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-namespace WiSdom
+namespace WisJoy
 {
     [ExecuteInEditMode]
     public class TweenManager : MonoBehaviour

@@ -66,10 +66,10 @@ namespace MessagePack.Resolvers
                 { typeof(global::System.Collections.Generic.List<long>), 12 },
                 { typeof(global::System.Collections.Generic.List<short>), 13 },
                 { typeof(global::System.Collections.Generic.List<string>), 14 },
-                { typeof(global::WiSdom.SaveSystem.Data.BasicTypeData), 15 },
-                { typeof(global::WiSdom.SaveSystem.Data.DeviceInfo), 16 },
-                { typeof(global::WiSdom.SaveSystem.Data.PlayerData), 17 },
-                { typeof(global::WiSdom.SaveSystem.Data.VersionData), 18 },
+                { typeof(global::WisJoy.SaveSystem.Data.BasicTypeData), 15 },
+                { typeof(global::WisJoy.SaveSystem.Data.DeviceInfo), 16 },
+                { typeof(global::WisJoy.SaveSystem.Data.PlayerData), 17 },
+                { typeof(global::WisJoy.SaveSystem.Data.VersionData), 18 },
             };
         }
 
@@ -137,10 +137,10 @@ namespace MessagePack.Resolvers
 
 namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
 {
-    public sealed class BasicTypeDataFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WiSdom.SaveSystem.Data.BasicTypeData>
+    public sealed class BasicTypeDataFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WisJoy.SaveSystem.Data.BasicTypeData>
     {
 
-        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WiSdom.SaveSystem.Data.BasicTypeData value, global::MessagePack.MessagePackSerializerOptions options)
+        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WisJoy.SaveSystem.Data.BasicTypeData value, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (value == null)
             {
@@ -182,7 +182,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<global::System.Collections.Generic.HashSet<string>>(formatterResolver).Serialize(ref writer, value.stringHashSet, options);
         }
 
-        public global::WiSdom.SaveSystem.Data.BasicTypeData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
+        public global::WisJoy.SaveSystem.Data.BasicTypeData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (reader.TryReadNil())
             {
@@ -192,7 +192,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             options.Security.DepthStep(ref reader);
             global::MessagePack.IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
-            var ____result = new global::WiSdom.SaveSystem.Data.BasicTypeData();
+            var ____result = new global::WisJoy.SaveSystem.Data.BasicTypeData();
 
             for (int i = 0; i < length; i++)
             {
@@ -299,10 +299,10 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
         }
     }
 
-    public sealed class DeviceInfoFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WiSdom.SaveSystem.Data.DeviceInfo>
+    public sealed class DeviceInfoFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WisJoy.SaveSystem.Data.DeviceInfo>
     {
 
-        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WiSdom.SaveSystem.Data.DeviceInfo value, global::MessagePack.MessagePackSerializerOptions options)
+        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WisJoy.SaveSystem.Data.DeviceInfo value, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (value == null)
             {
@@ -320,7 +320,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Serialize(ref writer, value.DeviceUniqueIdentifier, options);
         }
 
-        public global::WiSdom.SaveSystem.Data.DeviceInfo Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
+        public global::WisJoy.SaveSystem.Data.DeviceInfo Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (reader.TryReadNil())
             {
@@ -330,7 +330,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             options.Security.DepthStep(ref reader);
             global::MessagePack.IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
-            var ____result = new global::WiSdom.SaveSystem.Data.DeviceInfo();
+            var ____result = new global::WisJoy.SaveSystem.Data.DeviceInfo();
 
             for (int i = 0; i < length; i++)
             {
@@ -365,10 +365,10 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
         }
     }
 
-    public sealed class PlayerDataFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WiSdom.SaveSystem.Data.PlayerData>
+    public sealed class PlayerDataFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WisJoy.SaveSystem.Data.PlayerData>
     {
 
-        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WiSdom.SaveSystem.Data.PlayerData value, global::MessagePack.MessagePackSerializerOptions options)
+        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WisJoy.SaveSystem.Data.PlayerData value, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (value == null)
             {
@@ -381,7 +381,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             global::MessagePack.FormatterResolverExtensions.GetFormatterWithVerify<string>(formatterResolver).Serialize(ref writer, value.Name, options);
         }
 
-        public global::WiSdom.SaveSystem.Data.PlayerData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
+        public global::WisJoy.SaveSystem.Data.PlayerData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (reader.TryReadNil())
             {
@@ -391,7 +391,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             options.Security.DepthStep(ref reader);
             global::MessagePack.IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
-            var ____result = new global::WiSdom.SaveSystem.Data.PlayerData();
+            var ____result = new global::WisJoy.SaveSystem.Data.PlayerData();
 
             for (int i = 0; i < length; i++)
             {
@@ -411,10 +411,10 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
         }
     }
 
-    public sealed class VersionDataFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WiSdom.SaveSystem.Data.VersionData>
+    public sealed class VersionDataFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::WisJoy.SaveSystem.Data.VersionData>
     {
 
-        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WiSdom.SaveSystem.Data.VersionData value, global::MessagePack.MessagePackSerializerOptions options)
+        public void Serialize(ref global::MessagePack.MessagePackWriter writer, global::WisJoy.SaveSystem.Data.VersionData value, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (value == null)
             {
@@ -428,7 +428,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             writer.Write(value.VerCode);
         }
 
-        public global::WiSdom.SaveSystem.Data.VersionData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
+        public global::WisJoy.SaveSystem.Data.VersionData Deserialize(ref global::MessagePack.MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (reader.TryReadNil())
             {
@@ -438,7 +438,7 @@ namespace MessagePack.Formatters.WiSdom.SaveSystem.Data
             options.Security.DepthStep(ref reader);
             global::MessagePack.IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
-            var ____result = new global::WiSdom.SaveSystem.Data.VersionData();
+            var ____result = new global::WisJoy.SaveSystem.Data.VersionData();
 
             for (int i = 0; i < length; i++)
             {
