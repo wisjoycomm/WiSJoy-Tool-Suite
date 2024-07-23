@@ -1,20 +1,20 @@
 {
-    "name": "com.wisdom.toolsuite",
+    "name": "com.wisjoy.toolsuite",
     "version": "0.2.0",
-    "displayName": "WiSdom Tool Suite",
+    "displayName": "WiSJoy Tool Suite",
     "description": "A collection of development tools for Unity.",
     "unity": "2022.3",
     "author": {
-        "name": "WiSdom"
+        "name": "WiSJoy"
     },
     "license": "MIT license",
     "category": "Unity",
     "repository": {
         "type": "git",
-        "url": "https://github.com/WiSdom2313/WiSdom-Tool-Suite.git"
+        "url": "https://github.com/wisjoycomm/WiSJoy-Tool-Suite.git"
     },
-    "documentationUrl": "https://github.com/WiSdom2313/WiSdom-Tool-Suite/blob/main/README.md",
-    "changelogUrl": "https://github.com/WiSdom2313/WiSdom-Tool-Suite/blob/main/CHANGELOG.md",
-    "licenseUrl": "https://github.com/WiSdom2313/WiSdom-Tool-Suite/blob/main/LICENSE",
+    "documentationUrl": "https://github.com/wisjoycomm/WiSJoy-Tool-Suite/blob/main/README.md",
+    "changelogUrl": "https://github.com/wisjoycomm/WiSJoy-Tool-Suite/blob/main/CHANGELOG.md",
+    "licenseUrl": "https://github.com/wisjoycomm/WiSJoy-Tool-Suite/blob/main/LICENSE",
     "dependencies": {}
 }
