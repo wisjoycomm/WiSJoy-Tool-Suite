@@ -2,9 +2,9 @@ using System.Collections;
 using UnityEngine;
 using WiSJoy.DesignPattern;
 
-namespace WisJoy.Core
+namespace WisJoy.Manager.Scene
 {
-    public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
+    public class SceneManager : SingletonMonoBehaviour<SceneManager>
     {
 
         public void LoadScene(string sceneName)

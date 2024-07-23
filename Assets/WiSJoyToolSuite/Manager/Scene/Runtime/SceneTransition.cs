@@ -2,33 +2,36 @@ using System.Collections;
 using UnityEngine;
 using WiSJoy.DesignPattern;
 
-public class SceneTransition : SingletonMonoBehaviour<SceneTransition>
+namespace WisJoy.Manager.Scene
 {
-    [SerializeField] private CanvasGroup fadeOverlay;
-    public float fadeDuration = 1f;
-
-    public void FadeOut()
+    public class SceneTransition : SingletonMonoBehaviour<SceneTransition>
     {
-        StartCoroutine(Fade(1)); // Fading to opaque
-    }
+        [SerializeField] private CanvasGroup fadeOverlay;
+        public float fadeDuration = 1f;
 
-    public void FadeIn()
-    {
-        StartCoroutine(Fade(0)); // Fading to transparent
-    }
-
-    private IEnumerator Fade(float targetAlpha)
-    {
-        float startAlpha = fadeOverlay.alpha;
-        float time = 0;
-
-        while (time < fadeDuration)
+        public void FadeOut()
         {
-            fadeOverlay.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / fadeDuration);
-            time += Time.deltaTime;
-            yield return null;
+            StartCoroutine(Fade(1)); // Fading to opaque
         }
 
-        fadeOverlay.alpha = targetAlpha;
+        public void FadeIn()
+        {
+            StartCoroutine(Fade(0)); // Fading to transparent
+        }
+
+        private IEnumerator Fade(float targetAlpha)
+        {
+            float startAlpha = fadeOverlay.alpha;
+            float time = 0;
+
+            while (time < fadeDuration)
+            {
+                fadeOverlay.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / fadeDuration);
+                time += Time.deltaTime;
+                yield return null;
+            }
+
+            fadeOverlay.alpha = targetAlpha;
+        }
     }
 }

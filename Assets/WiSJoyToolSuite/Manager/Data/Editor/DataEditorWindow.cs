@@ -154,6 +154,7 @@ namespace WiSJoy.Manage.Data.Editor
             do
             {
                 EditorGUILayout.PropertyField(_sp, true);
+                DrawHorizontalLine(Color.gray);
             } while (_sp.NextVisible(false));
             _so.ApplyModifiedProperties();
             EditorGUILayout.EndScrollView();
@@ -163,6 +164,15 @@ namespace WiSJoy.Manage.Data.Editor
 
         }
 
+        private void DrawHorizontalLine(Color color, int thickness = 2, int padding = 10)
+        {
+            Rect r = EditorGUILayout.GetControlRect(GUILayout.Height(padding + thickness));
+            r.height = thickness;
+            r.y += padding / 2;
+            r.x -= 2;
+            r.width += 6;
+            EditorGUI.DrawRect(r, color);
+        }
 
         #region Generate DataManager
 
