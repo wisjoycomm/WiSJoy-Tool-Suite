@@ -41,6 +41,7 @@ namespace WiSJoy.Manage.Data
 
 		protected override void Awake()
 		{
+			base.Awake();
 			Fetch().Forget();
 		}
 		async UniTask Fetch()
