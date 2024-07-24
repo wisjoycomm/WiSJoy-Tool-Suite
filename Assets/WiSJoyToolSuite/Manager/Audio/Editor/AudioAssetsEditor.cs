@@ -27,7 +27,7 @@ namespace WiSJoy.Manager.Audio.Editor
         {
             AudioAssets audioAssets = (AudioAssets)target;
 
-            string musicclass = "\n\tpublic enum MusicID\n\t{\n";
+            string musicclass = "\n\tpublic enum eMusicID\n\t{\n";
             musicclass += $"\t\tNone = 0,\n";
             for (int i = 0; i < audioAssets.MusicClips.Length; i++)
             {
@@ -35,7 +35,7 @@ namespace WiSJoy.Manager.Audio.Editor
             }
             musicclass += "\t}\n";
 
-            string sfxclass = "\tpublic enum SFXID\n\t{\n";
+            string sfxclass = "\tpublic enum eSFXID\n\t{\n";
             sfxclass += $"\t\tNone = 0,\n";
             for (int i = 0; i < audioAssets.SFXClips.Length; i++)
             {

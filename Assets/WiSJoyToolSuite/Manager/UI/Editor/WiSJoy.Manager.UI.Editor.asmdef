@@ -1,3 +1,18 @@
 {
-	"name": "WiSJoy.Manager.UI.Editor"
+    "name": "WiSJoy.Manager.UI.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d3ccb29ee39c63b4ab03fe857272ddcd",
+        "GUID:636723dee9631114f96387657cf23053",
+        "GUID:41ac5544b428b034aaba82b307eab99b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -10,8 +10,8 @@ namespace WiSJoy.Manager.Audio
     [CreateAssetMenu(fileName = "AudioAssets", menuName = "WiSJoy/Audio/AudioAssets")]
     public class AudioAssets : ScriptableObject
     {
-        public AudioClipInfo[] MusicClips = new AudioClipInfo[0];
-        public AudioClipInfo[] SFXClips = new AudioClipInfo[0];
+        public AudioAssetsEntry[] MusicClips = new AudioAssetsEntry[0];
+        public AudioAssetsEntry[] SFXClips = new AudioAssetsEntry[0];
 
 #if UNITY_EDITOR
         public void RenameByAudioID()
@@ -106,7 +106,7 @@ namespace WiSJoy.Manager.Audio
 #endif
 
     [Serializable]
-    public class AudioClipInfo
+    public class AudioAssetsEntry
     {
         public string Key;
         public AudioClip[] Clips;

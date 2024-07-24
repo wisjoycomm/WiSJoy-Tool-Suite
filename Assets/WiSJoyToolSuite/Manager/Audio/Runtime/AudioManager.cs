@@ -41,7 +41,6 @@ namespace WiSJoy.Manager.Audio
             _musicMixerGroup.SetFloat("MusicVolume", Mathf.Log10(audioEvent.MusicVolume) * 20);
             _sfxMixerGroup.SetFloat("SFXVolume", Mathf.Log10(audioEvent.SFXVolume) * 20);
         }
-        #endregion
 
         #region Music
         private void PlayMusic(MusicEvent musicEvent)
@@ -81,6 +80,9 @@ namespace WiSJoy.Manager.Audio
             _sfxSource.Play();
         }
         #endregion
+
+        #endregion
+
     }
 
     internal class AudioEvent
@@ -92,7 +94,7 @@ namespace WiSJoy.Manager.Audio
 
     internal class MusicEvent
     {
-        public MusicID Key;
+        public eMusicID Key;
         public float Volume = 1f;
         public float Pitch = 1f;
         public bool Loop = false;
@@ -101,7 +103,7 @@ namespace WiSJoy.Manager.Audio
 
     internal class SFXEvent
     {
-        public SFXID Key;
+        public eSFXID Key;
         public float Volume = 1f;
         public float Pitch = 1f;
     }

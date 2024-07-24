@@ -42,13 +42,13 @@ namespace WiSJoy.Manager.Audio
     [System.Serializable]
     public class MusicSOEntry
     {
-        public MusicID Key;
+        public eMusicID Key;
         public AudioClip[] Clips;
     }
     [System.Serializable]
     public class SFXSOEntry
     {
-        public SFXID Key;
+        public eSFXID Key;
         public AudioClip[] Clips;
     }
 }
