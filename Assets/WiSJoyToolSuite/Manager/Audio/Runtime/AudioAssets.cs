@@ -30,7 +30,7 @@ namespace WiSJoy.Manager.Audio
                     string filename = Path.GetFileNameWithoutExtension(path);
                     string newpath = $"{musicpath}/{filename}.{extension}";
                     AssetDatabase.MoveAsset(path, newpath);
-                    string newname = $"{clipinfo.Name}_{i}";
+                    string newname = $"{clipinfo.Key}_{i}";
                     AssetDatabase.RenameAsset(newpath, newname);
                 }
             }
@@ -48,7 +48,7 @@ namespace WiSJoy.Manager.Audio
                     string filename = Path.GetFileNameWithoutExtension(path);
                     string newpath = $"{sfxpath}/{filename}.{extension}";
                     AssetDatabase.MoveAsset(path, newpath);
-                    string newname = $"{clipinfo.Name}_{i}";
+                    string newname = $"{clipinfo.Key}_{i}";
                     AssetDatabase.RenameAsset(newpath, newname);
                 }
             }
@@ -108,7 +108,7 @@ namespace WiSJoy.Manager.Audio
     [Serializable]
     public class AudioClipInfo
     {
-        public string Name;
+        public string Key;
         public AudioClip[] Clips;
     }
 }

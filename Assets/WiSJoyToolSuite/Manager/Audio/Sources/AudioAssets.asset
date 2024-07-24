@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: AudioAssets
   m_EditorClassIdentifier: 
   MusicClips:
-  - Name: Drama
+  - Key: Drama
     Clips:
     - {fileID: 8300000, guid: d6ddb2da4b9f6294f9a5c0c14f6ca77c, type: 3}
     - {fileID: 8300000, guid: 7b0dd537cac50774d8d504a46ab9bafe, type: 3}
-  - Name: Piano
+  - Key: Piano
     Clips:
     - {fileID: 8300000, guid: cc8c48a5e4b6a4b4cb138169c5248df9, type: 3}
   SFXClips:
-  - Name: Bang
+  - Key: Bang
     Clips:
     - {fileID: 8300000, guid: 3d7f9b01e9cf509469a91fc166184a39, type: 3}
     - {fileID: 8300000, guid: 43a34b1020111f041809361b0cf53790, type: 3}
-  - Name: Blink
+  - Key: Blink
     Clips:
     - {fileID: 8300000, guid: 9f9a9eb629fc18b44abc29286cae11c8, type: 3}
     - {fileID: 8300000, guid: 11e8dbe0c3564464fa04ccc843db0e4e, type: 3}
-  - Name: Victory
+  - Key: Victory
     Clips:
     - {fileID: 8300000, guid: 82ada9a591338da4b9f6b0395167373a, type: 3}
     - {fileID: 8300000, guid: 9dc5c122e9f1b094984d630bcc7601ce, type: 3}
     - {fileID: 8300000, guid: fda6d016b71044845830e344496c38c7, type: 3}
-  - Name: Glitch
+  - Key: Glitch
     Clips:
     - {fileID: 8300000, guid: 061bdf502e9472a44865e0ddfa261737, type: 3}

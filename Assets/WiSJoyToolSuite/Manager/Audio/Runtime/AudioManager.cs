@@ -9,6 +9,7 @@ namespace WiSJoy.Manager.Audio
 {
     public class AudioManager : MonoBehaviour
     {
+        public AudioSO SO;
         [SerializeField] private AudioSource _musicSource;
         [SerializeField] private AudioSource _sfxSource;
 
@@ -38,6 +39,7 @@ namespace WiSJoy.Manager.Audio
         }
         private void PlayMusic(MusicEvent musicEvent)
         {
+            _musicSource.clip = SO.MusicClips[(int)musicEvent.Key].Clips.Random();
             _musicSource.volume = musicEvent.Volume;
             _musicSource.pitch = musicEvent.Pitch;
             _musicSource.loop = musicEvent.Loop;
@@ -46,6 +48,7 @@ namespace WiSJoy.Manager.Audio
 
         private void Shot(SFXEvent audioEvent)
         {
+            _sfxSource.clip = SO.SFXClips[(int)audioEvent.Key].Clips.Random();
             _sfxSource.volume = audioEvent.Volume;
             _sfxSource.pitch = audioEvent.Pitch;
             _sfxSource.Play();
@@ -61,7 +64,7 @@ namespace WiSJoy.Manager.Audio
 
     internal class MusicEvent
     {
-        public string Name;
+        public MusicID Key;
         public float Volume = 1f;
         public float Pitch = 1f;
         public bool Loop = false;
@@ -70,7 +73,7 @@ namespace WiSJoy.Manager.Audio
 
     internal class SFXEvent
     {
-        public string Name;
+        public SFXID Key;
         public float Volume = 1f;
         public float Pitch = 1f;
     }
