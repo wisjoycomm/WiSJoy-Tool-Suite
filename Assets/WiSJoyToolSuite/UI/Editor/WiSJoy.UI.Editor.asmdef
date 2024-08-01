@@ -1,0 +1,20 @@
+{
+    "name": "WiSJoy.UI.Editor",
+    "rootNamespace": "WiSJoy.UI.Editor",
+    "references": [
+        "GUID:d3ccb29ee39c63b4ab03fe857272ddcd",
+        "GUID:636723dee9631114f96387657cf23053",
+        "GUID:41ac5544b428b034aaba82b307eab99b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

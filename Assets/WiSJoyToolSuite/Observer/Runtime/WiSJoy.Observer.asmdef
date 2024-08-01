@@ -1,0 +1,17 @@
+{
+    "name": "WiSJoy.Observer",
+    "rootNamespace": "WiSJoy.Observer",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:41ac5544b428b034aaba82b307eab99b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

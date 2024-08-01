@@ -1,0 +1,14 @@
+{
+    "name": "WiSJoy.Extend",
+    "rootNamespace": "WiSJoy.Extend",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

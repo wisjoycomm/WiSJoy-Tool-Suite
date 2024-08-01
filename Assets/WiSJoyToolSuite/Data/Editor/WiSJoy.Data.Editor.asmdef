@@ -1,0 +1,21 @@
+{
+    "name": "WiSJoy.Data.Editor",
+    "rootNamespace": "WiSJoy.Data.Editor",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:41ac5544b428b034aaba82b307eab99b",
+        "GUID:636723dee9631114f96387657cf23053",
+        "GUID:3e5b3a6211894aa4d996dd0d14cdb083"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

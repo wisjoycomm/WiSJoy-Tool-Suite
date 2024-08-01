@@ -1,0 +1,17 @@
+{
+    "name": "WiSJoy.Audio",
+    "rootNamespace": "WiSJoy.Audio",
+    "references": [
+        "GUID:41ac5544b428b034aaba82b307eab99b",
+        "GUID:8896e21696296c243be3d22f922a18be"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

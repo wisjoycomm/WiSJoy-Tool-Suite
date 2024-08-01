@@ -1,0 +1,20 @@
+{
+    "name": "WiSJoy.Audio.Editor",
+    "rootNamespace": "WiSJoy.Audio.Editor",
+    "references": [
+        "GUID:636723dee9631114f96387657cf23053",
+        "GUID:41ac5544b428b034aaba82b307eab99b",
+        "GUID:96a0fc6567eaf9d4687676c09a48dde6"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

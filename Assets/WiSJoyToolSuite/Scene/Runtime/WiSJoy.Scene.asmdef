@@ -1,0 +1,16 @@
+{
+    "name": "WiSJoy.Scene",
+    "rootNamespace": "WiSJoy.Scene",
+    "references": [
+        "GUID:41ac5544b428b034aaba82b307eab99b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
