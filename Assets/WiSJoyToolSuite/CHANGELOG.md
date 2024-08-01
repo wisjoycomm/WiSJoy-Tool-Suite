@@ -1,3 +1,7 @@
+## v0.3.0
+---
+### What's Changed
+- Remove MessagePack
 ## v0.2.0
 ---
 ### What's Changed
