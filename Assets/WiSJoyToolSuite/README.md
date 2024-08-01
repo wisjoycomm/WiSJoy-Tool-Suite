@@ -8,5 +8,4 @@ Before you install Tool Suite, this tools is heavily base on those dependency. G
 *Dependecy*
 - [UniTask#2.5.4](https://github.com/Cysharp/UniTask)
 - [Nuget for Unity](https://github.com/GlitchEnzo/NuGetForUnity)
-- MessagePackAnalyzer In Nuget
 - Microsoft.CodeAnalysis.CSharp In Nuget
