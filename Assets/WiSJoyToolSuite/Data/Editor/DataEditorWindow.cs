@@ -58,7 +58,7 @@ namespace WiSJoy.Data.Editor
                 if (!_isPrefab)
                 {
                     _isPrefab = true;
-                    _so = new SerializedObject(AssetDatabase.LoadAssetAtPath<DataManager>("Assets/WiSJoyToolSuite/Manager/Data/Sources/DataManager.prefab"));
+                    _so = new SerializedObject(AssetDatabase.LoadAssetAtPath<DataManager>("Assets/WiSJoyToolSuite/Data/Sources/DataManager.prefab"));
                 }
             }
             if (_so == null)
@@ -190,22 +190,39 @@ namespace WiSJoy.Data.Editor
 
             foreach (var classDecl in classDeclarations)
             {
-                var properties = classDecl.Members.OfType<PropertyDeclarationSyntax>()
-                    .Select(p => new PropertyInfo { Name = p.Identifier.ValueText, Type = p.Type.ToString() })
-                    .ToList();
+                // Lấy tất cả các properties và fields của class
+                var members = classDecl.Members.OfType<MemberDeclarationSyntax>();
+                var propertiesAndFields = members.Where(m => m is PropertyDeclarationSyntax || m is FieldDeclarationSyntax);
+
+                List<PropertyInfo> properties = new List<PropertyInfo>();
+                foreach (var member in propertiesAndFields)
+                {
+                    if (member is PropertyDeclarationSyntax property)
+                    {
+                        properties.Add(new PropertyInfo { Name = property.Identifier.ValueText, Type = property.Type.ToString() });
+                    }
+                    else if (member is FieldDeclarationSyntax field)
+                    {
+                        // Lấy tên và kiểu của field đầu tiên trong khai báo (giả sử mỗi khai báo chỉ có một field)
+                        properties.Add(new PropertyInfo { Name = field.Declaration.Variables.First().Identifier.ValueText, Type = field.Declaration.Type.ToString() });
+                    }
+                }
 
                 classes.Add(new ClassInfo { Name = classDecl.Identifier.ValueText, Properties = properties });
             }
 
-            GenerateGameDataClass(classes);
             GenerateDataManagerClass(classes);
         }
 
-        private void GenerateGameDataClass(List<ClassInfo> classes)
+        private string GenerateDetailClass(ClassInfo root)
         {
-            string filePath = UtilityEditor.GetFilePathInAsset("DataEditorWindow", ".cs");
-
-            string existingCode = File.ReadAllText(filePath);
+            string classCode = "";
+            foreach (var property in root.Properties)
+            {
+                string propertyCode = "{" + $" get => {root.Name}.{property.Name};  set => {root.Name}.{property.Name} = value;" + "}";
+                classCode += $"\n\t\tpublic {property.Type} {property.Name} {propertyCode}";
+            }
+            return classCode;
         }
 
         private void GenerateDataManagerClass(List<ClassInfo> classes)
@@ -329,6 +346,29 @@ namespace WiSJoy.Data.Editor
                 int endIndex = existingCode.IndexOf("#endregion", startIndex);
                 existingCode = existingCode.Remove(startIndex, endIndex - startIndex);
                 existingCode = existingCode.Insert(startIndex, ClearAllMethods);
+                Debug.Log("DataManager updated with new methods.");
+            }
+            else
+            {
+                Debug.Log("No new methods were added to DataManager.");
+            }
+
+            string detailGenerators = "";
+            foreach (var classInfo in classes)
+            {
+                string detailGenerator = GenerateDetailClass(classInfo);
+                detailGenerators += detailGenerator;
+            }
+            detailGenerators += "\n\t\t";
+
+            // Replace existing detail generators with new ones
+            if (!string.IsNullOrEmpty(detailGenerators))
+            {
+                // Example: Replace existing methods
+                int startIndex = existingCode.IndexOf("#region Detail Generators") + "#region Detail Generators".Length;
+                int endIndex = existingCode.IndexOf("#endregion", startIndex);
+                existingCode = existingCode.Remove(startIndex, endIndex - startIndex);
+                existingCode = existingCode.Insert(startIndex, detailGenerators);
                 Debug.Log("DataManager updated with new methods.");
             }
             else
